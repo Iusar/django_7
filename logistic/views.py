@@ -10,7 +10,7 @@ from .logistic_filters import StockFilter
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-
+    search_fields = ['title', 'description']
 
 
 class StockViewSet(ModelViewSet):
